@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Date</title>
+
+<script LANGUAGE="JavaScript">
+
+var now = new Date()
+var heure = now.getHours()
+var minutes = now.getMinutes()
+var salutation
+
+if (heure <= 11) // de 1 heure du matin jusqu'à midi(non compris), c'est le matin.
+{ 
+salutation = "Bonjour !"
+}
+else if (heure > 11 && heure < 18) // L'après-midi va de midi à 17 
+{ salutation = "Bonne après-midi !"
+}
+else if (heure > 17 && heure < 21) // La soirée va de 18 h à 20 h  
+{ salutation = "Bonne soirée !"
+}
+else if (heure > 20) // De 21 h à minuit, c'est la nuit
+{ salutation = "Bonne nuit !"
+}
+if (minutes < 10) // Lees minutes sont affichées sur deux chiffres et un zéro ajouté à toute valeur inférieure à 10.
+{ minutes = "0" + minutes
+}
+
+document.write(salutation + "\nIl est " + heure 
+               + " h " + minutes);
+</script>
+
+</head>
+<body>
+
+</body>
+</html>

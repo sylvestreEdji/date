@@ -1,0 +1,34 @@
+<html>
+<head>
+  <title>Date</title>
+ 
+</head>
+<body>
+  <script type="text/javascript">
+   
+function date_function()
+{
+  var dt=new Date();
+  var heure=dt.getHours();
+  
+  console.log("dt.getHours()="+heure);
+  if (heure<10) 
+  {
+    heure=" "+heure;
+  }
+  var minute=dt.getMinutes();
+  console.log("dt.getMinutes()="+minute);
+  if (minute<10) 
+  {
+    minute=" "+minute;
+  }
+  var titre="Votre navigateur indique "+heure+":"+minute;
+  return titre;
+}
+
+var titre=date_function();// Appel fonction
+document.write(titre);
+	
+  </script>
+</body>
+</html>
